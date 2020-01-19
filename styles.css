@@ -1,0 +1,22 @@
+body{
+
+     /*background-color: #28292a;  A Voir */
+     background-color: cornflowerblue;
+
+}
+
+.infosGit{
+    height: 100vh;
+}
+.image{
+    background-image: url("GabyNBcopie.jpg");
+    background-size: cover;
+    height: 95vh;
+}
+.nom{
+    color: white;
+    font-size: 30px;
+}
+.Formulaire {
+    background-color: crimson;
+}

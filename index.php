@@ -70,7 +70,7 @@
     <!--Présentation card-->
 
     <section class="container-fluid">
-        <div class="card pt-0 mt-5 mb-5 border border-warning">
+        <div class="carte card pt-0 mt-5 mb-5 border border-warning">
             <div class="row">
               <div class="col-md-6">
                 <img src="Gabycopie.png" class="card-img" alt="Portrait">
@@ -89,23 +89,24 @@
     <!--Infos git, ajout du JS plus tard-->
     <section class="container-fluid">
         <div class="infosGit row">
-            <h2>INFOS DE GIT ICI LOL</h2>
+            <h2>Informations:</h2>
         </div>
     </section>
-    
+
 <!--Formulaire-->
     <section class="container-fluid">
         <div class="Formulaire">
             <form action="index.php" method="POST"> 
-                <label for="email">Adresse mail</label>
+            <h2 class="infoForm">Contactez-moi</h2>
+                <label for="email">Adresse mail:</label>
                 <input type="email" class="form-control" id="email" placeholder="Entrer votre mail">
-                <label for="name">Nom</label>
+                <label for="name">Nom:</label>
                 <input type="text" class="form-control" id="name" placeholder="Entrer votre nom">
-                <label for="surname">Prénom</label>
+                <label for="surname">Prénom:</label>
                 <input type="text" class="form-control" id="surname" placeholder="Entrer vore prénom">
                 <div class="d-flex flex-row-reverse bd-highlight">
                     <!--<button type="button" class="btn btn-outline-dark p-2 bd-highlight" id="btn">Envoyer</button>-->
-                    <input type = "submit" value = "Envoyer"/> 
+                    <input type = "submit" class="btn btn-outline-warning mt-3 mb-3 p-2 bd-highlight" id="btn" value = "Envoyer"/> 
                 </div>
             </form>
         </div>

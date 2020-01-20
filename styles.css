@@ -1,12 +1,16 @@
 body{
 
      /*background-color: #28292a;  A Voir */
-     background-color: cornflowerblue;
+     background-color:#1b1b1b;
+}
 
+.carte{
+    background-color: whitesmoke;
 }
 
 .infosGit{
     height: 100vh;
+    color: white;
 }
 .image{
     background-image: url("GabyNBcopie.jpg");
@@ -18,5 +22,7 @@ body{
     font-size: 30px;
 }
 .Formulaire {
-    background-color: crimson;
+    color: white;
+    width: 95vh;
+    display: flex;
 }

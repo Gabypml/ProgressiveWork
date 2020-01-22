@@ -1,3 +1,8 @@
+<?php 
+  //session_start();
+  require('Formulaire.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,16 +35,16 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item" id="yellow">
-              <a href="index.html" class="nav-link px-4">Accueil</a>
+              <a href="index.php" class="nav-link px-4">Accueil</a>
             </li>
             <li class="nav-item" id="yellow">
-              <a href="carte.html" class="nav-link px-4">Présentation</a>
+              <a href="#présentation" class="nav-link px-4">Présentation</a>
             </li>
             <li class="nav-item" id="yellow">
-              <a href="photos.html" class="nav-link px-4">My Work</a>
+              <a href="#information" class="nav-link px-4">Informations</a>
             </li>
             <li class="nav-item active" id="yellow">
-              <a href="restaurants.html" class="nav-link px-4">Contact</a>
+              <a href="#contact" class="nav-link px-4">Contact</a>
             </li>
           </ul>
         </div>
@@ -69,7 +74,7 @@
 
     <!--Présentation card-->
 
-    <section class="container-fluid">
+    <section class="container-fluid" id="présentation">
         <div class="carte card pt-0 mt-5 mb-5 border border-warning">
             <div class="row">
               <div class="col-md-6">
@@ -87,29 +92,35 @@
     </section>
 
     <!--Infos git, ajout du JS plus tard-->
-    <section class="container-fluid">
+    <section class="container-fluid" id="information">
         <div class="infosGit row">
             <h2>Informations:</h2>
         </div>
     </section>
 
 <!--Formulaire-->
-    <section class="container-fluid">
+    <section class="container-fluid" id="contact">
         <div class="Formulaire">
             <form action="index.php" method="POST"> 
             <h2 class="infoForm">Contactez-moi</h2>
                 <label for="email">Adresse mail:</label>
-                <input type="email" class="form-control" id="email" placeholder="Entrer votre mail">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Entrer votre mail">
                 <label for="name">Nom:</label>
-                <input type="text" class="form-control" id="name" placeholder="Entrer votre nom">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Entrer votre nom">
                 <label for="surname">Prénom:</label>
-                <input type="text" class="form-control" id="surname" placeholder="Entrer vore prénom">
+                <input type="text" class="form-control" name="surname" id="surname" placeholder="Entrer vore prénom">
                 <div class="d-flex flex-row-reverse bd-highlight">
                     <!--<button type="button" class="btn btn-outline-dark p-2 bd-highlight" id="btn">Envoyer</button>-->
-                    <input type = "submit" class="btn btn-outline-warning mt-3 mb-3 p-2 bd-highlight" id="btn" value = "Envoyer"/> 
+                    <input type="submit" name="submit" class="btn btn-outline-warning mt-3 mb-3 p-2 bd-highlight" id="btn" value = "Envoyer"/> 
                 </div>
+               
             </form>
         </div>
     </section>
 </body>
 </html>
+
+<?php
+unset($_SESSION['errors']);
+unset($_SESSION['inputs']);
+?>

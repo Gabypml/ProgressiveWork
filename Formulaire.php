@@ -7,7 +7,8 @@ $bdd= new PDO("mysql:host=localhost;dbname=Portfolio;charset=UTF8;" , "root", "r
    
 
 
-
+$MessageError = "";
+$GG = "";
 $errors = [];
 $ok = [];
 
@@ -16,7 +17,7 @@ if (isset($_POST['submit'])) {
     if(isset($_POST["email"]) && !empty($_POST["email"])){
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); //Sanitization email
         if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) { ///Si c'est faux, mettre erreur
-            $errors['email'] = "Cette addresse est invalide."; //souci avec cette méthode, s'affiche pas 
+            $errors['email'] = "Cette addresse est invalide.";  
         }
     }
 
@@ -36,27 +37,19 @@ if (isset($_POST['submit'])) {
          }
     }
 
-    if(!empty($errors))
-{
-    // je met les erreurs dans la session 
 
-    $_SESSION['errors'] = $errors;
-
-}
-else 
-{
-    // tt est ok, dc j'initialise un message qui dit que tout est ok
-
-    $ok['bon'] = 'tout est en ordre';
-    
-    $_SESSION['ok'] = $ok;
-}
-
+    //// Verifier si tout existe et si tout est vide pour voir le message d'erreur 
     if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['surname'])){
-        if(empty($_POST['email']) && empty($_POST['name']) && empty($_POST['surname'])){
-            echo "Veuillez remplir les champs";
+        if(empty($_POST['email']) || empty($_POST['name']) || empty($_POST['surname'])){
+            $MessageError = "Veuillez remplir les champs";
         }
     }
+    //// Je prépare ma bdd, je dis ce que je vais vouloir prendre. ( C'est du SQL ici)
+    $req = $bdd->prepare("INSERT INTO infos(nom, mail)VALUES(?,?)");
+
+    ///Ici on va lui dire quoi mettre dedans ( dans le truc en haut )
+    $req->execute(array($name, $email));
+    $GG = "Votre message a été envoyé avec succès";
 }
 
 

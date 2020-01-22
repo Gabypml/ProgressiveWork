@@ -1,7 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
 
-     background-color: teal;
-     /*background-color:#1b1b1b;*/
+     /*background-color: teal;*/
+     background-color:#1b1b1b;
 }
 
 .carte{

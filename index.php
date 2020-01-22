@@ -113,14 +113,19 @@
                     <!--<button type="button" class="btn btn-outline-dark p-2 bd-highlight" id="btn">Envoyer</button>-->
                     <input type="submit" name="submit" class="btn btn-outline-warning mt-3 mb-3 p-2 bd-highlight" id="btn" value = "Envoyer"/> 
                 </div>
-               
+               <div class="messageErreur">
+                 <?php
+                  echo $MessageError;
+                  ?>
+               </div>
+               <div class="MessageGood">
+                 <?php
+                 echo $GG;
+                 ?>
+                </div>
+              
             </form>
         </div>
     </section>
 </body>
 </html>
-
-<?php
-unset($_SESSION['errors']);
-unset($_SESSION['inputs']);
-?>

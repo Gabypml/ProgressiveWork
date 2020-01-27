@@ -17,7 +17,7 @@
 
     <title>Portfolio de Gaby</title>
 </head>
-<body>
+<body >
     <!--Navbar-->
     <nav
       class="navbar navbar-expand-md navbar-light bg-warning sticky-top border-bottom border-secondary text-white"
@@ -31,11 +31,11 @@
           aria-label="Navigation Bar Toggler"
         >
           <span class="navbar-toggler-icon"></span>
-        </button> <!--Changer les liens sinon ça n'ira jamais-->
+        </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item" id="yellow">
-              <a href="index.php" class="nav-link px-4">Accueil</a>
+              <a href="#accueil" class="nav-link px-4">Accueil</a>
             </li>
             <li class="nav-item" id="yellow">
               <a href="#présentation" class="nav-link px-4">Présentation</a>
@@ -53,7 +53,7 @@
 
     <!--Jumbotron-->
 
-    <div class="jumbotron jumbotron-fluid p-0 m-0">
+    <div class="jumbotron jumbotron-fluid p-0 m-0 bg-dark" id="accueil">
         <div class="container-fluid p-0 m-0">
     
               <div class="image"> 
@@ -61,8 +61,10 @@
                     <div class="py-5">
           
                       <div class="nom">
-                        <h1 class="card-title h2 mt-5 mb-0">Gaby Pombo </h1>
-                        <p class="mb-5 pb-3 px-md-5 mx-md-5 mt-0">Dévelopeur web</p>
+                        <!--<h1 class="card-title h2 mt-5 mb-0">Gaby Pombo </h1>
+                        <p class="mb-5 pb-3 px-md-5 mx-md-5 mt-0">Dévelopeur web</p>-->
+                        <div id="maintext"><p>Gaby Pombo</p>
+                         <p>Développeur web</p> 
                       </div>
               
                     </div>
@@ -83,7 +85,7 @@
               <div class="col-md-4 text-justify">
                 <div class="card-body">
                   <h4 class="card-title text-dark mt-5">Qui suis-je?</h4>
-                  <p class="card-text text-dark">Bonjour à tous! Fraîchement formée chez Becode Charleroi je suis activement à la recherche d'un stage en tant que developpeuse front-end. Blablabla 
+                  <p class="card-text text-dark">Bonjour à tous! Fraîchement formée chez Becode Charleroi je suis activement à la recherche d'un stage en tant que developpeuse front-end. Ayant fait des études artistique et publicitaires auparavant, j'ai un sens de l'esthétique et du design plus développés, d'où mon penchant pour le Front-end.  
                   </p>
                 </div>
               </div>
@@ -127,5 +129,6 @@
             </form>
         </div>
     </section>
+    <script src="fetch.js"></script>
 </body>
 </html>

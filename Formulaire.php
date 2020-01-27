@@ -1,12 +1,13 @@
 <?php
 // require('index.php');
 
+$password_dbb = "testii";
+$root_info =  "id12374086_root";
 
-
-$bdd= new PDO("mysql:host=localhost;dbname=Portfolio;charset=UTF8;" , "root", "root");
+$bdd= new PDO("mysql:host=localhost;dbnameid12374086_portfolio;charset=UTF8;" , $root_info, $password_dbb);
    
 
-
+$name = "";
 $MessageError = "";
 $GG = "";
 $errors = [];

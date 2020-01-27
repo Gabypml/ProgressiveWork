@@ -4,8 +4,7 @@ html{
 
 body{
 
-     /*background-color: teal;*/
-     background-color:#1b1b1b;
+    background-color:#1b1b1b;
 }
 
 .carte{
@@ -13,7 +12,7 @@ body{
 }
 
 .infosGit{
-    height: 100vh;
+    height: 30vh;
     color: white;
 }
 .image{
@@ -30,3 +29,7 @@ body{
     width: 95vh;
     display: flex;
 }
+p{
+    color:white;
+}
+
